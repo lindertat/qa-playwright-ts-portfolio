@@ -23,13 +23,13 @@ projects: [
   {
     name: "chromium-no-auth",
     use: { ...devices["Desktop Chrome"] },
-    testMatch: /.*(auth|smoke)\.spec\.ts/,
+    testMatch: /.*(auth|smoke|api-to-ui)\.spec\.ts/,
   },
   {
     name: "chromium",
     dependencies: ["setup"],
     use: { ...devices["Desktop Chrome"], storageState: ".auth/standard.json" },
-    testIgnore: /.*(auth|smoke)\.spec\.ts/,
+    testIgnore: /.*(auth|smoke|api-to-ui)\.spec\.ts/,
   },
 ],
 });
