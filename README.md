@@ -1,4 +1,4 @@
-# qa-playwright-ts-portfolio
+[![CI](https://github.com/lindertat/qa-playwright-ts-portfolio/actions/workflows/playwright.yml/badge.svg)](https://github.com/lindertat/qa-playwright-ts-portfolio/actions/workflows/playwright.yml)
 # QA Automation Portfolio — Playwright + TypeScript (UI + API)
 
 Production-style QA automation portfolio built with **Playwright + TypeScript**.
@@ -40,48 +40,48 @@ Includes **UI tests**, **API tests**, **API → UI data-driven example**, and a 
 ---
 
 ## ✅ Project Structure
-pages/          # Page Objects
-tests/ui/       # UI test specs
-tests/api/      # API test specs
-tests/setup/    # auth setup (storageState)
-fixtures/       # shared fixtures/helpers
-test-data/      # typed test data (users)
-docs/           # manual QA docs (plan, checklists, test design)
-.github/        # CI workflow
+- pages/          # Page Objects
+- tests/ui/       # UI test specs
+- tests/api/      # API test specs
+- tests/setup/    # auth setup (storageState)
+- fixtures/       # shared fixtures/helpers
+- test-data/      # typed test data (users)
+- docs/           # manual QA docs (plan, checklists, test design)
+- .github/        # CI workflow
 
 ---
 
-## ✅ How to Run Locally
-Install dependencies:
-npm ci
+### ✅ How to Run Locally
+- Install dependencies:
+- npm ci
 
-## ✅ Run all tests
-npx playwright test
+### ✅ Run all tests
+- npx playwright test
 
-## ✅ Run UI tests:
-npx playwright test tests/ui
+### ✅ Run UI tests:
+- npx playwright test tests/ui
 
-## ✅ Run API tests:
-npx playwright test tests/api
+### ✅ Run API tests:
+- npx playwright test tests/api
 
-## ✅ Open HTML report:
-npx playwright show-report
+### ✅ Open HTML report:
+- npx playwright show-report
 
-### ✅ CI (GitHub Actions)
+## ✅ CI (GitHub Actions)
 Tests are executed automatically on:
-	•	push to main
-	•	pull_request to main
+	- •	push to main
+	- •	pull_request to main
 
 Artifacts include:
-	•	HTML report
-	•	screenshots/videos/traces (on failures)
+	- •	HTML report
+	- •	screenshots/videos/traces (on failures)
 
-### ✅ Manual QA Docs
-See /docs folder:
-	•	test-plan.md
-	•	manual-smoke-checklist-web.md
-	•	mobile-regression-checklist.md
-	•	test-design.md
+## ✅ Manual QA Docs
+See **/docs** folder:
+	- •	test-plan.md
+	- •	manual-smoke-checklist-web.md
+	- •	mobile-![Playwright Tests](https://github.com/lindertat/qa-playwright-ts-portfolio/actions/workflows/playwright.yml/badge.svg)regression-checklist.md
+	- •	test-design.md
 
-### ✅ Notes
+## ✅ Notes
   This repository uses public demo apps for practice/portfolio purposes.
