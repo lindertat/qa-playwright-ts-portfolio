@@ -21,15 +21,37 @@ projects: [
     testMatch: /.*\.setup\.ts/,
   },
   {
-    name: "chromium-no-auth",
-    use: { ...devices["Desktop Chrome"] },
-    testMatch: /.*(auth|smoke|api-to-ui)\.spec\.ts/,
+  name: "chromium-no-auth",
+  use: {
+  ...devices["Desktop Chrome"],
+  launchOptions: {
+    slowMo: 300,
   },
+},
+  testMatch: [
+    /tests\/ui\/.*\.spec\.ts/,
+    /tests\/api\/.*\.spec\.ts/
+  ],
+},
   {
-    name: "chromium",
-    dependencies: ["setup"],
-    use: { ...devices["Desktop Chrome"], storageState: ".auth/standard.json" },
-    testIgnore: /.*(auth|smoke|api-to-ui)\.spec\.ts/,
+  name: "chromium",
+  dependencies: ["setup"],
+  use: { ...devices["Desktop Chrome"], storageState: ".auth/standard.json" },
+  testMatch: /tests\/ui\/.*authenticated.*\.spec\.ts/,
+},
+{
+  name: "debug",
+  dependencies: ["setup"],
+  use: {
+    ...devices["Desktop Chrome"], 
+    headless: false,
+    launchOptions: {
+      slowMo: 300,
+    },
+    trace: "on",
+    video: "on",
+    screenshot: "on",
   },
+},
 ],
 });
