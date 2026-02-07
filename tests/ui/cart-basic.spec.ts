@@ -1,6 +1,8 @@
 import { test, expect } from "@playwright/test";
 import { LoginPage } from "../../pages/login.page";
 import { users } from "../../test-data/users";
+import { InventoryPage } from "../../pages/inventory.page";
+
 
 test("Cart basic flow: add item and verify in cart", async ({ page }) => {
   const loginPage = new LoginPage(page);
@@ -16,6 +18,8 @@ test("Cart basic flow: add item and verify in cart", async ({ page }) => {
 
   // Проверяем, что мы вошли
   await expect(page).toHaveURL(/inventory\.html/);
+
+  const inventoryPage = new InventoryPage(page);
 
   // 3. Добавляем первый товар в корзину
   const addToCartButton = page.getByRole("button", {
